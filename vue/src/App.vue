@@ -40,12 +40,6 @@ export default {
         NavigationList
     },
     data() {
-      const navigation = [
-            { id: 1, text: "Inbox", icon: "message", path: "inbox" },
-            { id: 2, text: "Sent Mail", icon: "check", path: "sent-mail" },
-            { id: 3, text: "Trash", icon: "trash", path: "trash" },
-            { id: 4, text: "Spam", icon: "mention", path: "spam" }
-        ];
         return {
             buttonOptions: {
                 icon: "menu",
@@ -53,8 +47,7 @@ export default {
                     this.isDrawerOpen = !this.isDrawerOpen;
                 }
             },
-            isDrawerOpen: false,
-            navigation
+            isDrawerOpen: false
         };
     }
 };
