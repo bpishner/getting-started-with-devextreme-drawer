@@ -10,7 +10,7 @@
         <DxDrawer
             opened-state-mode="overlap"
             reveal-mode="expand"
-            v-model:opened="isDrawerOpen"
+            :opened.sync="isDrawerOpen"
             :minSize="37"
             :height="250"
             template="list">
