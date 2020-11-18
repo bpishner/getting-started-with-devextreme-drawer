@@ -14,7 +14,7 @@ class NavigationList extends React.Component {
         this.props.stateHandler({ isDrawerOpen: false });
     }
 
-    renderLink = (data) => {
+    renderItem = (data) => {
         return (
             <div>
                 <Link to={'/' + data.path}>
@@ -37,7 +37,7 @@ class NavigationList extends React.Component {
                     width={200} 
                     selectionMode="single"
                     onSelectionChanged={this.closeDrawer}
-                    itemRender={this.renderLink}
+                    itemRender={this.renderItem}
                 />
             </React.Fragment>
         );
