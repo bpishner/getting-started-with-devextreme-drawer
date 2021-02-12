@@ -3,7 +3,9 @@ import { NgModule } from "@angular/core";
 import { AppComponent } from "./app.component";
 
 import { AppRoutingModule } from "./app-routing.module";
-import { DxDrawerModule, DxToolbarModule, DxListModule } from "devextreme-angular";
+import { DxListModule } from "devextreme-angular/ui/list";
+import { DxToolbarModule } from "devextreme-angular/ui/toolbar";
+import { DxDrawerModule } from "devextreme-angular/ui/drawer";
 
 @NgModule({
     declarations: [
