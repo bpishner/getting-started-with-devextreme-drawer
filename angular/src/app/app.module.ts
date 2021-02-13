@@ -6,6 +6,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { DxListModule } from "devextreme-angular/ui/list";
 import { DxToolbarModule } from "devextreme-angular/ui/toolbar";
 import { DxDrawerModule } from "devextreme-angular/ui/drawer";
+import { DxButtonModule } from "devextreme-angular/ui/button";
+import { DxTemplateModule } from "devextreme-angular/core";
 
 @NgModule({
     declarations: [
@@ -16,7 +18,9 @@ import { DxDrawerModule } from "devextreme-angular/ui/drawer";
         AppRoutingModule,
         DxDrawerModule,
         DxToolbarModule,
-        DxListModule
+        DxListModule,
+        DxButtonModule,
+        DxTemplateModule
     ],
     providers: [],
     bootstrap: [AppComponent]
