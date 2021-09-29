@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with DevExtreme React Navigation Drawer
+
+This repository stores React source code for the [Getting Started with Navigation Drawer](https://js.devexpress.com/Documentation/Guide/UI_Components/Drawer/Getting_Started_with_Navigation_Drawer/) tutorial.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

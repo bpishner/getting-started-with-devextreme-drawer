@@ -1,4 +1,6 @@
-# getting-started-with-drawer
+# Getting Started with DevExtreme Vue Navigation Drawer
+
+This repository stores Vue source code for the [Getting Started with Navigation Drawer](https://js.devexpress.com/Documentation/Guide/UI_Components/Drawer/Getting_Started_with_Navigation_Drawer/) tutorial.
 
 ## Project setup
 ```

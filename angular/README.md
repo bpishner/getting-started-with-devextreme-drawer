@@ -1,4 +1,6 @@
-# GettingStartedWithDrawer
+# Getting Started with DevExtreme Angular Navigation Drawer
+
+This repository stores Angular source code for the [Getting Started with Navigation Drawer](https://js.devexpress.com/Documentation/Guide/UI_Components/Drawer/Getting_Started_with_Navigation_Drawer/) tutorial.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
