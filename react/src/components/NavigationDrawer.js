@@ -1,68 +1,61 @@
-import React from "react";
-import "./NavigationDrawer.css";
-
-import { Drawer } from "devextreme-react/drawer";
-import { Toolbar, Item } from "devextreme-react/toolbar";
+import React, { useState, useMemo, useCallback } from "react";
 import NavigationList from "./NavigationList";
-
-import { Switch, Route } from "react-router-dom";
-
 import Inbox from "../views/Inbox";
 import Trash from "../views/Trash";
 import SentMail from "../views/SentMail";
 import Spam from "../views/Spam";
+import "devextreme/dist/css/dx.light.css";
+import "./NavigationDrawer.css";
+import { Routes, Route } from 'react-router-dom'; 
+import { Drawer } from "devextreme-react/drawer";
+import { Toolbar, Item } from "devextreme-react/toolbar";
 
-class NavigationDrawer extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            isDrawerOpen: false
-        };
-        this.buttonOptions = {
+function NavigationDrawer() {
+    const [isOpened, setState] = useState(false);
+    const buttonOptions = useMemo(() => {
+        return {
             icon: "menu",
             onClick: () => {
-                this.setState({ isDrawerOpen: !this.state.isDrawerOpen });
+                setState(!isOpened );
             }
         };
-    }
-    
-    renderList = () => {
-        const stateHandler = (newState) => this.setState(newState);
+    }, [isOpened]);
+
+    const renderList = useCallback(() => {
+        const stateHandler = (newState) => setState(newState);
         return (
             <NavigationList stateHandler={stateHandler} />
         );
-    }
-    
-    render() {
+    }, []);
+
         return (
-            <React.Fragment>
+            <div>
                 <Toolbar id="toolbar">
-                    <Item 
-                        widget="dxButton" 
-                        options={this.buttonOptions} 
+                    <Item
+                        widget="dxButton"
+                        options={buttonOptions}
                         location="before"
                     />
                 </Toolbar>
                 <Drawer
-                    minSize={37}
-                    height={250}
                     revealMode="expand"
+                    height={250}
                     openedStateMode="overlap"
-                    render={this.renderList}
-                    opened={this.state.isDrawerOpen}>
+                    minSize={37}
+                    render={renderList}
+                    opened={isOpened}
+                >   
                     <div id="view">
-                        <Switch>
-                            <Route exact path="/" component={Inbox} />
-                            <Route exact path="/inbox" component={Inbox} />
-                            <Route exact path="/sent-mail" component={SentMail} />
-                            <Route exact path="/spam" component={Spam} />
-                            <Route exact path="/trash" component={Trash} />
-                        </Switch>
+                        <Routes>
+                            <Route exact path="views/inbox" element={<Inbox />} />
+                            <Route path="views/sent-mail" element={<SentMail />} />
+                            <Route path="views/spam" element={<Spam />} />
+                            <Route path="views/trash" element={<Trash />} />
+                        </Routes>
                     </div>
                 </Drawer>
-            </React.Fragment>
+            </div>
         );
-    }
 }
+
 export default NavigationDrawer;

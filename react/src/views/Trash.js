@@ -1,10 +1,8 @@
 import React from "react";
 
-class Trash extends React.Component {
-    render() {
+function Trash(){
         return (
             <div>Trash</div>
         );
-    }
 }
 export default Trash;

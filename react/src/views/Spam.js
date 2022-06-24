@@ -1,10 +1,8 @@
 import React from "react";
 
-class Spam extends React.Component {
-    render() {
+function Spam(){
         return (
             <div>Spam</div>
         );
-    }
 }
 export default Spam;

@@ -10,10 +10,11 @@
         <DxDrawer
             opened-state-mode="overlap"
             reveal-mode="expand"
-            :opened.sync="isDrawerOpen"
+            v-model:opened="isDrawerOpen"
             :minSize="37"
             :height="250"
-            template="list">
+            template="list"
+        >
             <template #list>
                 <NavigationList
                     @navigated="isDrawerOpen = false"

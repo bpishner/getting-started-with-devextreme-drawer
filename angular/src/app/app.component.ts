@@ -13,7 +13,7 @@ export class AppComponent {
         { id: 3, text: "Trash", icon: "trash", path: "trash" },
         { id: 4, text: "Spam", icon: "mention", path: "spam" }
     ];
-    isDrawerOpen: Boolean = true;
+    isDrawerOpen: boolean = true;
     buttonOptions: any = {
         icon: "menu",
         onClick: () => {

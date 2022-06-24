@@ -1,46 +1,46 @@
-import React from "react";
+import React, { useCallback } from "react";
 import List from "devextreme-react/list";
 import { Link } from "react-router-dom";
 
 const navigation = [
-    { id: 1, text: "Inbox", icon: "message", path: "inbox" },
-    { id: 2, text: "Sent Mail", icon: "check", path: "sent-mail" },
-    { id: 3, text: "Trash", icon: "trash", path: "trash" },
-    { id: 4, text: "Spam", icon: "mention", path: "spam" }
+    { id: 1, text: "Inbox", icon: "message", path: "views/inbox" },
+    { id: 2, text: "Sent Mail", icon: "check", path: "views/sent-mail" },
+    { id: 3, text: "Trash", icon: "trash", path: "views/trash" },
+    { id: 4, text: "Spam", icon: "mention", path: "views/spam" }
 ];
 
-class NavigationList extends React.Component {
-    closeDrawer = () => {
-        this.props.stateHandler({ isDrawerOpen: false });
+function NavigationList(props){
+    const closeDrawer = () => {
+        props.stateHandler(false);
     }
 
-    renderItem = (data) => {
+    const renderItem = useCallback((data) => {
         return (
             <div>
                 <Link to={'/' + data.path}>
                     <div>
                         <div className="dx-list-item-icon-container">
-                            <i className={`dx-icon dx-list-item-icon dx-icon-${data.icon}`}></i>
+                            <i className={`dx-icon dx-list-item-icon dx-icon-${data.icon}`}/>
                         </div>
                         <span>{data.text}</span>
                     </div>
                 </Link>
             </div>
         );
-    }
+    }, [])
 
-    render() {
         return (
-            <React.Fragment>
+            <div>
                 <List
                     items={navigation}
-                    width={200} 
+                    width={200}
                     selectionMode="single"
-                    onSelectionChanged={this.closeDrawer}
-                    itemRender={this.renderItem}
+                    onSelectionChanged={closeDrawer}
+                    itemRender={renderItem}
                 />
-            </React.Fragment>
+            </div>
         );
-    }
+
 }
+
 export default NavigationList;

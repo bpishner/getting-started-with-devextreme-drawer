@@ -1,33 +1,30 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-
+import { createApp, h } from 'vue';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import 'devextreme/dist/css/dx.common.css';
 import 'devextreme/dist/css/dx.light.css';
-
 import App from './App.vue';
-import InboxComponent from "./components/Inbox.vue";
+import InboxItemComponent from "./components/InboxItem.vue";
 import SentMailComponent from "./components/SentMail.vue";
-import TrashComponent from "./components/Trash.vue";
-import SpamComponent from "./components/Spam.vue";
-
-Vue.config.productionTip = false;
-
-Vue.use(VueRouter);
+import TrashItemComponent from "./components/TrashItem.vue";
+import SpamItemComponent from "./components/SpamItem.vue";
 
 const routes = [
-    { path: "", redirect: "/inbox" },
-    { path: "/inbox", component: InboxComponent },
+    { path: "", redirect: "/inbox-item" },
+    { path: "/inbox-item", component: InboxItemComponent },
     { path: "/sent-mail", component: SentMailComponent },
-    { path: "/trash", component: TrashComponent },
-    { path: "/spam", component: SpamComponent }
+    { path: "/trash-item", component: TrashItemComponent },
+    { path: "/spam-item", component: SpamItemComponent }
 ];
 
-const router = new VueRouter({
-    mode: "history",
-    routes
+const router = createRouter({
+    history: createWebHashHistory(),
+    routes,
+})
+
+const app  = createApp({
+    render: ()=>h(App)
 });
 
-new Vue({
-    render: h => h(App),
-    router
-}).$mount('#app')
+app.use(router);
+
+app.mount('#app');

@@ -1,10 +1,8 @@
 import React from "react";
 
-class Inbox extends React.Component {
-    render() {
+function Inbox(){
         return (
             <div>Inbox</div>
         );
-    }
 }
 export default Inbox;

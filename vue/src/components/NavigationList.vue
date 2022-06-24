@@ -28,10 +28,10 @@ export default {
     },
     data() {
         const navigation = [
-            { id: 1, text: "Inbox", icon: "message", path: "inbox" },
+            { id: 1, text: "Inbox", icon: "message", path: "inbox-item" },
             { id: 2, text: "Sent Mail", icon: "check", path: "sent-mail" },
-            { id: 3, text: "Trash", icon: "trash", path: "trash" },
-            { id: 4, text: "Spam", icon: "mention", path: "spam" }
+            { id: 3, text: "Trash", icon: "trash", path: "trash-item" },
+            { id: 4, text: "Spam", icon: "mention", path: "spam-item" }
         ];
         return {
             navigation

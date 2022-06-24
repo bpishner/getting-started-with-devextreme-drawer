@@ -1,10 +1,8 @@
 import React from "react";
 
-class SentMail extends React.Component {
-    render() {
+function SentMail(){
         return (
             <div>Sent Mail</div>
         );
-    }
 }
 export default SentMail;
