@@ -5,7 +5,8 @@
 <!-- default badges end -->
 # DevExtreme Drawer - Getting Started
 
-This repository stores the code examples of the Drawer component for the [Getting Started with Drawer](https://js.devexpress.com/Documentation/Guide/UI_Components/Drawer/Getting_Started_with_Navigation_Drawer/) tutorial. This tutorial creates a Drawer that allows a user to switch between pages. Users can click a button on a toolbar to open and close the Drawer.
+This repository stores the code examples of the Drawer component for the [Getting Started with Drawer](https://js.devexpress.com/Documentation/Guide/UI_Components/Drawer/Getting_Started_with_Navigation_Drawer/) tutorial. This tutorial creates a Drawer that allows a user to switch between pages. Users can click a button on the toolbar to open and close the Drawer.
+
 
 <div align="center"><img src="./drawer.gif" /></div>
 
