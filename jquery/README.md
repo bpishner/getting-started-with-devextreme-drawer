@@ -23,4 +23,4 @@ You can learn more about jQuery API in the [jQuery documentation](https://api.jq
 
 To get more help on DevExtreme submit an issue on [GitHub](https://github.com/DevExpress/devextreme/issues) or [Support Center](https://www.devexpress.com/Support/Center/Question/Create)
 
-
+http://localhost/brian/getting-started-with-devextreme-drawer/jquery/src/index.html
